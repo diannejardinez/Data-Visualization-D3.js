@@ -5,7 +5,7 @@
 **Life Expectancy**
 
 **Webpage:** 
-https://diannejardinez.github.io/Life_Expectancy/index.html
+https://diannejardinez.github.io/Data-Visualization-D3.js/Life_Expectancy/index.html
 
 ---
 
@@ -13,7 +13,7 @@ https://diannejardinez.github.io/Life_Expectancy/index.html
 **Star Break Coffee**
 
 **Webpage:** 
-https://diannejardinez.github.io/Star-Break-Coffee/index.html
+https://diannejardinez.github.io/Data-Visualization-D3.js/Star-Break-Coffee/index.html
 
 ---
 
