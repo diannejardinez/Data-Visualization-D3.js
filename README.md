@@ -13,7 +13,7 @@ https://diannejardinez.github.io/Data-Visualization-D3.js/Life_Expectancy
 **Star Break Coffee**
 
 **Webpage:** 
-https://diannejardinez.github.io/Data-Visualization-D3.js/Star-Break-Coffee/index.html
+https://diannejardinez.github.io/Data-Visualization-D3.js/Star-Break-Coffee
 
 ---
 
