@@ -25,7 +25,7 @@ g.append("text")
     .text("Month");
 
 // Y Label
-g.append("text")
+var yLabel = g.append("text")
     .attr("x", - (height / 2))
     .attr("y", -80)
     .attr("font-size", "20px")
