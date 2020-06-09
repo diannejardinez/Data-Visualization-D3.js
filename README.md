@@ -5,7 +5,7 @@
 **Life Expectancy**
 
 **Webpage:** 
-https://diannejardinez.github.io/Data-Visualization-D3.js/Life_Expectancy/index.html
+https://diannejardinez.github.io/Data-Visualization-D3.js/Life_Expectancy
 
 ---
 
