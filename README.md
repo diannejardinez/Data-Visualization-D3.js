@@ -7,7 +7,7 @@
 Objective: Building a bar chart with an automatic dynamic transition.
 
 **Webpage:** 
-https://diannejardinez.github.io/Data-Visualization-D3.js/Star-Break-Coffee/index.html
+https://diannejardinez.github.io/Data-Visualization-D3.js/Star-Break-Coffee
 
 
 ---
