@@ -22,4 +22,14 @@ https://diannejardinez.github.io/Data-Visualization-D3.js/Life_Expectancy
 
 ---
 
+### D3.js - Level: Medium
+**Unemployment Rate**
+
+Objective: Building a Choropleth map for visualizing geographic data and combining multiple files. 
+
+**Webpage:** 
+https://diannejardinez.github.io/Data-Visualization-D3.js/Unemployment-Rate
+
+---
+
 ### D3.js - Level: Difficult
