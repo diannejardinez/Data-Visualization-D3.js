@@ -119,7 +119,7 @@ function update(data) {
     // EXIT old elements not present in new data.
     rects.exit()
         .attr("fill", "green")
-    .transition(t)
+    .transition(time)
         .attr("y", y(0))
         .attr("height", 0)
         .remove();
