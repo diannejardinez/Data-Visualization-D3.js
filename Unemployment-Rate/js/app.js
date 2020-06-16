@@ -91,9 +91,7 @@ function ready(us) {
 
 var tip = d3.tip().attr('class', 'd3-tip')
 .html(function(d) {
-    var text = ("County: " + unemployment.get(d.countyName) + "<br>Unemployment Rate: " + d3.format(".2f")(d.rate) + "%");   
-    
-      // layer.bindPopup("<h1>" + feature.properties.neighborhood + "</h1> <hr> <h2>" + feature.properties.borough + "</h2>");
+    var text = ("County: " + d.countyName + "<br>Unemployment Rate: " + d3.format(".2f")(d.rate) + "%");   
     return text;
 });
 g.call(tip);
