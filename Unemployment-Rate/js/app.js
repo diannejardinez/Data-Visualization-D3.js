@@ -57,9 +57,10 @@ g.call(d3.axisBottom(x)
     .remove();
 
 var promises = [
-d3.json("https://d3js.org/us-10m.v1.json"),
-d3.csv("data/unemployment_2019.csv",  function(d) { unemployment.set(d.id, +d.rate, d.countyName); 
-console.log(d.countyName)})
+    d3.json("https://d3js.org/us-10m.v1.json"),
+    d3.csv("data/unemployment_2019.csv",  function(d) { unemployment.set(d.id, +d.rate, d.countyName); 
+// console.log(d.countyName) 
+    })
 ]
 
 Promise.all(promises).then(function(data){
@@ -90,7 +91,9 @@ function ready(us) {
 
 var tip = d3.tip().attr('class', 'd3-tip')
 .html(function(d) {
-    var text = "County: " +(d.countyName) + "<br><strong>Unemployment Rate:"+"</strong> <span style='color:red'>" + d3.format(".2f")(d.rate) + "%" + "</span><br>";   
+    var text = ("County: " + d.countyName + "<br>Unemployment Rate: " + d3.format(".2f")(d.rate) + "%");   
+    
+      // layer.bindPopup("<h1>" + feature.properties.neighborhood + "</h1> <hr> <h2>" + feature.properties.borough + "</h2>");
     return text;
 });
 g.call(tip);
