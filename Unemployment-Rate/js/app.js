@@ -1,5 +1,5 @@
 
-var margin = { left: 20, right:20, top:50, bottom:100 };
+var margin = { right:20, top:50, bottom:100 };
 
 var width = 900 - margin.left - margin.right,
     height = 700 - margin.top - margin.bottom;
@@ -91,7 +91,7 @@ function ready(us) {
 
 var tip = d3.tip().attr('class', 'd3-tip')
 .html(function(d) {
-    var text = ("County: " + d.countyName + "<br>Unemployment Rate: " + d3.format(".2f")(d.rate) + "%");   
+    var text = ("County: " + unemployment.get(d.countyName) + "<br>Unemployment Rate: " + d3.format(".2f")(d.rate) + "%");   
     
       // layer.bindPopup("<h1>" + feature.properties.neighborhood + "</h1> <hr> <h2>" + feature.properties.borough + "</h2>");
     return text;
