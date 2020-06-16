@@ -1,5 +1,5 @@
 
-var margin = { right:20, top:50, bottom:100 };
+var margin = { left: 20, right:20, top:50, bottom:100 };
 
 var width = 900 - margin.left - margin.right,
     height = 700 - margin.top - margin.bottom;
@@ -90,7 +90,7 @@ function ready(us) {
 
 var tip = d3.tip().attr('class', 'd3-tip')
 .html(function(d) {
-    var text = "<strong>Unemployment Rate:</strong> <span style='color:red'>" + d3.format(".2f")(d.rate) + "%" + "</span><br>";
+    var text = "County: " +(d.countyName) + "<br><strong>Unemployment Rate:"+"</strong> <span style='color:red'>" + d3.format(".2f")(d.rate) + "%" + "</span><br>";   
     return text;
 });
 g.call(tip);
