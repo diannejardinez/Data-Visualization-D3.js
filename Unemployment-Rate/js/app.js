@@ -56,10 +56,12 @@ g.call(d3.axisBottom(x)
 .select(".domain")
     .remove();
 
+// Link source to data information: https://www.bls.gov/lau/
 var promises = [
     d3.json("https://d3js.org/us-10m.v1.json"),
-    d3.csv("data/unemployment_2019.csv",  function(data) { unemployment.set(data.id, +data.rate, data.countyName); 
-// console.log(d.countyName) 
+    d3.csv("data/unemployment_2019.csv",  function(d) { unemployment.set(d.id, +d.rate, d.countyName); 
+console.log((d.countyName)) 
+console.log((d.id)) 
     })
 ]
 
@@ -75,10 +77,10 @@ function ready(us) {
         .selectAll("path")
             .data(topojson.feature(us, us.objects.counties).features)
         .enter().append("path")
-            .attr("fill", function(d) { return color(data.rate = unemployment.get(data.id, data.countyName)); })
+            .attr("fill", function(d) { return color(d.rate = unemployment.get(d.id, d.countyName)); })
             .on("mouseover", tip.show)
             .on("mouseout", tip.hide)
-            .attr("data", path);
+            .attr("d", path);
 
     svg.append("path")
         .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
@@ -86,13 +88,15 @@ function ready(us) {
         .attr("fill", "none")
         .attr("stroke", "white")
         .attr("stroke-linejoin", "round")
-        .attr("data", path);
+        .attr("d", path);
 }
 
-var tip = d3.tip().attr('class', 'd3-tip')
-.html(function(data) {
-    var text = ("County: " + data.countyName + "<br>Unemployment Rate: " + d3.format(".2f")(data.rate) + "%");   
-    return text;
-});
+var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .html(function(d) {
+        return (`Unemployment Rate: ${d3.format(".2f")(d.rate)}%`);
+        // return (`${d.countyName}<br>Unemployment Rate: ${d3.format(".2f")(d.rate)}%`);
+
+    });
 g.call(tip);
 
